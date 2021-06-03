@@ -139,6 +139,7 @@ a:-webkit-any-link {
     background-color: rgb(231, 231, 231);
 }
 .card__footer__button {
+    font-weight: 700;
     position: relative;
     display: inline-block;
     left: 50%;
