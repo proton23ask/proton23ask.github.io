@@ -1,54 +1,73 @@
-body {
+* {
     margin: 0;
     padding: 0;
 }
 /* add background color to the top navigation */
-nav {
-    background-color: #333;
-    overflow: hidden;
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) /*, 0 6px 20px 0 rgba(0, 0, 0, 0.19)*/;
+    z-index: 300;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
 }
 
 /* style the link inside the navigation bar */
 
-a {
-    float: left;
-    color: #f2f2f2;
-    text-align: justify;
+.container {
+    padding-top: 50px;
+}
+
+a.left {
+    float: right;
     padding: 18px 16px;
+}
+
+a {
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
+    color: rgb(0, 0, 0);
 }
 
-a.logo {
-    padding: 5px;
+.logo > span {
+    font-size: 20px;
+    float: left;
+    padding: 18px 16px;
+    color: darkorange;
+    text-decoration: underline;
+    font-family: "Press Start 2P", cursive;
 }
 
-a img {
-    height: 40px;
-}
 /* change the color of link on hover */
 nav a:hover {
-    color: rgb(253, 158, 90);
+    color: white;
+    background-color: darkorange;
 }
 
-nav a.active {
-    color: rgb(253, 158, 90);
+a.active {
+    color: rgb(255, 141, 59);
 }
 
-.main {
-    width: 980px;
-    margin: 0 auto;
-    min-height: 1000px;
-}
-
-h1 {
+.text {
+    padding-top: 100px;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(65, 64, 64);
     text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 200px 200px 200px;
-    grid-gap: 50px;
+    grid-gap: 80px;
     justify-content: center;
 }
 
@@ -62,45 +81,26 @@ h1 {
     height: 300px;
 }
 
-footer {
-    margin-top: 0px;
+.footer {
+    margin-top: 130px;
+    padding: 20px;
     height: 250px;
-    background-color: #181623;
+    background-color: #24203b;
 }
 
-footer p {
+.footer p {
     padding-top: 20px;
     text-align: center;
     color: #fff;
 }
 
-a:-webkit-any-link {
-    cursor: pointer;
-}
-
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #f9b256;
-}
-
-::-webkit-scrollbar-track-piece {
-    background: #181623;
-}
-
-::selection {
-    color: #fff;
-    background: #d4ad6a;
-}
-
 .card {
     width: 200px;
     height: 300px;
-    border: 1px solid gray;
+    border: 1px solid rgb(65, 64, 64);
     border-radius: 15px;
 }
+
 .card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -141,6 +141,8 @@ a:-webkit-any-link {
 .card__footer__button {
     font-weight: 700;
     position: relative;
+    z-index: 2;
+
     display: inline-block;
     left: 50%;
     top: 50%;
