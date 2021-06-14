@@ -1,0 +1,53 @@
+<!--<?php
+session_start();
+
+if ($_SESSION['user']) {
+    header('Location: profile.php');
+}
+
+?>
+-->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация и регистрация</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+    <!-- Форма авторизации -->
+
+    <form action="vendor/signin.php" method="post">
+        <div class="form__header">
+            <p>войти в учётную запись</p>
+        </div>
+
+        <!--<label>Логин</label>-->
+        <input type="text" name="login" placeholder="ИМЯ ПОЛЬЗОВАТЕЛЯ">
+        <!--<label>Пароль</label>-->
+        <input type="password" name="password" placeholder="ПАРОЛЬ">
+        <button type="submit">Войти</button>
+        <div class="form__footer">
+            <p>
+                ВПЕРВЫЕ В DRAGON CRAFT? - <a href="register.html">ЗАРЕГИСТРИРУЙТЕСЬ</a>
+            </p>
+        </div>
+
+        <!--
+        <?php
+            if ($_SESSION['message']) {
+                echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+            }
+            unset($_SESSION['message']);
+        ?>
+-->
+    </form>
+
+</body>
+
+</html>
